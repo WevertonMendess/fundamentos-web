@@ -1,0 +1,298 @@
+/* ===== RESET ===== */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: poppins;
+}
+
+/* ===== FUNDO PRINCIPAL ===== */
+.principal{
+    width: 100%; /* ocupa toda a largura da tela */
+    height: 100vh; /* ocupa toda a altura da tela (100% da tela) */
+
+    background-image: url("laptop.jpg"); /* adiciona a imagem */
+    background-size: cover; /* ocupa toda a tela */
+    background-position: center; /* centraliza a imagem */
+    background-repeat: no-repeat; /* evita repetição */
+}
+
+/* ===== CAMADA ESCURA (OVERLAY) ===== */
+.camada{
+    width: 100%; /* cobre toda a tela */
+    height: 100%; /* cobre toda a tela */
+
+    background: linear-gradient(
+        to right,
+        rgba(2, 6, 23, 0.9),
+        rgba(2, 6, 23, 0.7),
+        rgba(2, 6, 23, 0.4)
+    ); /* escurece com transparência */ /*controla a opacidade das cores */
+
+    display: flex; /* organiza os elementos */ 
+    flex-direction: column; /* organiza em coluna (vertical) */
+}
+
+/* ===== MENU ===== */
+header nav{
+    display:flex; /* coloca tudo lado a lado */
+    justify-content: space-between; /* joga um item pra esquerda e outro pra direita */
+    align-items: center; /* centraliza na altura */
+    padding: 30px 60px; /* cria espaço interno (respiro) */
+}
+
+/* LOGO */
+nav h1{
+    font-size: 28px;
+    color: #22d3ee;
+}
+
+/* LISTA */
+nav ul{
+    display: flex; /* coloca os itens lado a lado */
+}
+
+nav ul li{
+    list-style: none; /* remove as bolinhas da lista */
+}
+
+/* LINKS */
+nav ul li a{
+    text-decoration: none; /* remove sublinhado */
+    padding: 5px 20px; /* espaço interno (aumenta área de clique) */
+    text-transform: uppercase; /* deixa tudo MAIÚSCULO */
+    font-size: 14px; 
+    color: white; /* cor do texto */
+    transition: 0.3s; /* suaviza efeitos (hover) */
+}
+
+/* o link muda de cor ao passar o mouse */
+nav ul li a:hover{ /*ativa quando o mouse passa por cima */
+    color: #22d3ee;
+}
+
+/* botão mais bonito, moderno e fácil de clicar  */
+#botao{
+    background: linear-gradient(90deg,#c04848,#480048); /* aplica um fundo com degradê (duas cores) */
+    padding: 10px 25px; /* aumenta o tamanho interno do botão */ 
+    border-radius: 20px; /* deixa as bordas arredondadas */
+}
+
+/* conteúdo centralizado e bem posicionado ===== */
+.conteudo{
+    flex: 1; /* faz essa área ocupar o espaço disponível */ 
+    display: flex; /* ativa o modo de alinhamento fácil */ 
+    align-items: center; /* centraliza na vertical */
+    padding-left: 100px; /* cria espaço à esquerda */ 
+}
+
+/* texto mais organizado e fácil de ler */
+.texto{
+    max-width: 550px; /* limita a largura do texto (não fica esticado) */ 
+    color: white; /* define a cor do texto */
+}
+
+/* título destacado e separado do conteúdo */
+.texto h3{
+    font-size: 22px; /* define o tamanho do texto */
+    margin-bottom: 10px; /* cria espaço abaixo do título */ /* Esse espaço evita que o texto fique grudado*/
+}
+
+.texto h1{ /* título grande, organizado e fácil de ler */
+    font-size: 55px; /* define o tamanho do título */
+    line-height: 60px; /* controla o espaçamento entre linhas */ /* O line-height evita que as linhas fiquem coladas” */
+}
+
+/* "O <span> serve para estilizar um pedaço específico do texto” */
+.texto h1 span{ /* marca uma parte do texto para estilizar */
+    color: #22d3ee; /* muda a cor dessa parte */
+}
+
+/* O h2 complementa o título principal (h1) */
+/* subtítulo destacado e bem separado */
+.texto h2{
+    margin: 15px 0; /* cria espaço acima e abaixo */
+    text-decoration: underline; /* adiciona linha embaixo */
+    font-size: 22px; /* define o tamanho do texto */
+}
+
+/* PARÁGRAFO */
+/* Esses ajustes deixam o texto mais fácil de ler */
+.texto p{ 
+    font-size: 16px; /* tamanho da letra */
+    line-height: 26px; /* espaço entre as linhas */
+    margin-top: 10px;  /* espaço acima do texto */
+}
+
+/* botão moderno e agradável de usar */
+.texto button{
+    margin-top: 30px; /* espaço acima do botão */
+    padding: 12px 25px; /* aumenta o tamanho interno */
+
+    border: none; /* remove a borda padrão */
+    border-radius: 6px; /* deixa arredondado */
+
+    background: linear-gradient(90deg, #06b6d4, #3b82f6); /* fundo com degradê */
+    color: white; /* cor do texto */
+
+    cursor: pointer; /* muda o cursor para “mão” */
+    transition: 0.3s; /* suaviza efeitos */
+}
+
+.texto button:hover{ /* ativa ao passar o mouse */
+    transform: scale(1.05); /* aumenta levemente o botão */
+}
+
+
+/* ===== SEÇÃO SOBRE ===== */
+#sobre{
+    width: 100%;
+    padding: 80px 100px;
+
+    background: linear-gradient(
+        to right,
+        #020617,
+        #0f172a
+    );
+
+    color: white;
+}
+
+/* TÍTULO */
+#sobre h2{
+    font-size: 32px;
+    margin-bottom: 30px;
+    color: #22d3ee;
+}
+
+/* RECUO E JUSTIFICADO */
+#sobre p{
+    font-size: 16px;
+    line-height: 28px;
+    margin-bottom: 20px;
+    max-width: 800px;
+
+    text-align: justify; /* alinha nas duas laterais */
+    text-indent: 30px; /* recuo da primeira linha */
+}
+
+
+
+/* ===== SEÇÃO SERVIÇOS ===== */
+#servicos{
+    padding: 80px 100px; /* espaço interno (cima/baixo e lados) */
+    background: #020617; /* cor de fundo escura */
+    color: white; /* cor padrão do texto */
+}
+
+/* ===== TÍTULO DA SEÇÃO ===== */
+#servicos h2{
+    font-size: 32px; /* tamanho do título */
+    margin-bottom: 40px; /* espaço abaixo do título */
+    color: #22d3ee; /* cor destaque */
+}
+
+/* ===== CONTAINER DOS CARDS ===== */
+.cards{
+    display: grid; /* ativa o sistema de grade (grid) */
+    
+    /* cria 3 colunas com tamanhos iguais */
+    grid-template-columns: repeat(3, 1fr);
+    
+    gap: 25px; /* espaço entre os cards */
+}
+
+/* ===== CARD INDIVIDUAL ===== */
+.card{
+    background: #0f172a; /* cor de fundo do card */
+    padding: 25px; /* espaço interno */
+    border-radius: 10px; /* bordas arredondadas */
+
+    transition: 0.3s; /* suaviza os efeitos */
+    cursor: pointer; /* muda o cursor para “mão” */
+}
+
+/* ===== EFEITO AO PASSAR O MOUSE ===== */
+.card:hover{
+    transform: translateY(-10px); 
+    /* move o card levemente para cima */
+
+    box-shadow: 0 10px 25px rgba(0,0,0,0.5); 
+    /* cria sombra para dar efeito de elevação */
+}
+
+/* ===== TÍTULO DO CARD ===== */
+.card h3{
+    margin-bottom: 15px; /* espaço abaixo do título */
+    color: #22d3ee; /* cor destaque */
+}
+
+/* ===== TEXTO DO CARD ===== */
+.card p{
+    font-size: 14px; /* tamanho da fonte */
+    line-height: 22px; /* espaço entre linhas (melhora leitura) */
+}
+
+
+
+/* ===== SEÇÃO CONTATOS ===== */
+#contatos{
+    padding: 80px 100px; /* espaço interno (cima/baixo e lados) */
+    background: #0f172a; /* cor de fundo escura */
+    color: white; /* cor padrão do texto */
+    text-align: center; /* centraliza todo o conteúdo */
+}
+
+/* ===== TÍTULO DA SEÇÃO ===== */
+#contatos h2{
+    font-size: 32px; /* tamanho do título */
+    margin-bottom: 40px; /* espaço abaixo do título */
+    color: #22d3ee; /* cor de destaque */
+}
+
+/* ===== CONTAINER DOS ITENS ===== */
+.contato-container{
+    display: flex; /* coloca os itens lado a lado */
+    justify-content: center; /* centraliza horizontalmente */
+    gap: 50px; /* espaço entre os itens */
+}
+
+/* ===== CADA ITEM DE CONTATO (LINK) ===== */
+.contato-item{
+    text-decoration: none; /* remove o sublinhado do link */
+    color: white; /* mantém o texto branco */
+
+    display: flex; /* ativa flexbox */
+    flex-direction: column; /* organiza em coluna (ícone em cima, texto embaixo) */
+    align-items: center; /* centraliza os elementos */
+
+    transition: 0.3s; /* suaviza o efeito hover */
+}
+
+/* ===== ÍCONES ===== */
+.contato-item i{
+    font-size: 40px; /* tamanho do ícone */
+    margin-bottom: 10px; /* espaço entre ícone e texto */
+    color: #22d3ee; /* cor do ícone */
+}
+
+/* ===== EFEITO AO PASSAR O MOUSE ===== */
+.contato-item:hover{
+    transform: scale(1.1); 
+    /* aumenta levemente o tamanho (efeito de destaque) */
+}
+
+
+
+/* ===== RODAPÉ ===== */
+footer{
+    background: #020617; /* cor de fundo escura */
+    color: white; /* cor do texto */
+    
+    text-align: center; /* centraliza o texto */
+    
+    padding: 25px; /* espaço interno */
+    
+    font-size: 14px; /* tamanho da fonte */
+}
+
