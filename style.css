@@ -296,3 +296,97 @@ footer{
     font-size: 14px; /* tamanho da fonte */
 }
 
+
+* ===== RESPONSIVO (CELULAR) ===== */
+/* Aqui estamos dizendo: 
+   "Se a tela tiver até 768px (tablet ou celular), aplique essas regras" */
+@media (max-width: 768px){
+
+    /* ===== MENU ===== */
+    header nav{
+        flex-direction: column; 
+        /* muda de linha horizontal para coluna (um embaixo do outro) */
+
+        padding: 20px; 
+        /* reduz o espaço interno para caber melhor no celular */
+
+        gap: 15px; 
+        /* cria um espaço entre os elementos (logo e menu) */
+    }
+
+    nav ul{
+        flex-direction: column; 
+        /* deixa os links do menu em formato vertical */
+
+        align-items: center; 
+        /* centraliza os itens do menu */
+    }
+
+    nav ul li a{
+        padding: 10px; 
+        /* aumenta a área de clique (melhor para o dedo no celular) */
+    }
+
+    /* ===== CONTEÚDO PRINCIPAL ===== */
+    .conteudo{
+        padding-left: 20px; 
+        padding-right: 20px; 
+        /* reduz as laterais (no desktop era muito grande) */
+
+        text-align: center; 
+        /* centraliza o texto */
+
+        justify-content: center; 
+        /* centraliza verticalmente dentro do espaço */
+    }
+
+    .texto{
+        max-width: 100%; 
+        /* permite que o texto ocupe toda a largura da tela */
+    }
+
+    .texto h1{
+        font-size: 38px; 
+        /* diminui o tamanho do título (antes estava muito grande) */
+
+        line-height: 45px; 
+        /* ajusta o espaçamento entre as linhas */
+    }
+
+    .texto h2{
+        font-size: 18px; 
+        /* reduz o subtítulo */
+    }
+
+    .texto p{
+        font-size: 14px; 
+        /* diminui o tamanho do texto para caber melhor */
+    }
+
+    /* ===== SEÇÕES ===== */
+    #sobre,
+    #servicos,
+    #contatos{
+        padding: 50px 20px; 
+        /* reduz o espaçamento interno (antes estava muito largo) */
+    }
+
+    /* ===== CARDS ===== */
+    .cards{
+        grid-template-columns: 1fr; 
+        /* muda de 3 colunas para 1 coluna (empilha os cards) */
+    }
+
+    /* ===== CONTATOS ===== */
+    .contato-container{
+        flex-direction: column; 
+        /* deixa os contatos um embaixo do outro */
+
+        gap: 30px; 
+        /* espaço entre eles */
+    }
+
+}
+
+
+
